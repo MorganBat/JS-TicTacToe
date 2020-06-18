@@ -1,1 +1,6 @@
-console.log("yeah mate")
+let board = [
+    [undefined, undefined, undefined],
+    [undefined, undefined, undefined],
+    [undefined, undefined, undefined]
+    ]
+
