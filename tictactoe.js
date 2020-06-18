@@ -10,5 +10,11 @@ console.log(squares[2])
 squares.forEach(square => {
     square.addEventListener("click", () => {
         square.innerHTML = currentPlayer
+        if (currentPlayer === "X") {
+            currentPlayer = "O"
+        }
+        else if (currentPlayer === "O") {
+            currentPlayer = "X"
+        }
     })
 })
