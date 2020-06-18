@@ -1,20 +1,20 @@
 body {
-    background-color: black;
-    color: greenyellow;
+    background-color: wheat;
+    color: black;
 }
 
 table {
-    border: 1px solid greenyellow;
+    border: 1px solid black;
     width: 80%;
 }
 
 tr {
     height: 100px;
-    border: 1px solid greenyellow;
+    border: 1px solid black;
 }
 
 td {
     text-align: center;
-    border: 1px solid greenyellow;
+    border: 1px solid black;
     font-size: xx-large;
 }

@@ -1,9 +1,10 @@
 let board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+let currentPlayer = "X"
 
-let square = document.querySelectorAll("td")
+const squares = document.querySelectorAll("td")
 
-square.addEventListener("click", clickSquare())
-
-function clickSquare() {
-    console.log("square clicked")
-}
+squares.forEach(square => {
+    square.addEventListener("click", () => {
+        console.log(square)
+    })
+})
