@@ -1,4 +1,4 @@
-let board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
 let currentPlayer = "X"
 let gameWon = false
 
@@ -44,12 +44,12 @@ function isGameWon(boardState) {
             let winnerNotify = document.querySelector('#winnerID')
             winnerNotify.innerText = `${JSON.stringify(currentPlayer)} has won!`
             gameWon = true
+            console.log(board)
         }
     })
 }
 
 document.getElementById("gameReset").addEventListener("click", () => {
-    let board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
     gameWon = false
     squares.forEach(square => {
         square.innerHTML = ''
@@ -57,4 +57,8 @@ document.getElementById("gameReset").addEventListener("click", () => {
     currentPlayer = "X"
     let title = document.querySelector("#currentPlayer")
     title.innerText = "\"X\""
+    let winnerNotify = document.querySelector('#winnerID')
+    winnerNotify.innerHTML = ''
+    board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+    console.log(board)
 });
