@@ -15,6 +15,9 @@ squares.forEach(square => {
             else if (currentPlayer === "O") {
                 currentPlayer = "X"
             }
+            let title = document.querySelector("#currentPlayer")
+            console.log(currentPlayer)
+            title.innerText = JSON.stringify(currentPlayer)
         }
 
     })
@@ -31,13 +34,13 @@ function isGameWon(boardState) {
         [1,4,7],
         [2,5,8],
         // Diagonals
-        [0, 4, 8],
-        [2, 4, 6]
+        [0,4,8],
+        [2,4,6]
         ]
 
     winningLines.forEach(winningLine => {
         if (boardState[winningLine[0]] === boardState[winningLine[1]] && boardState[winningLine[1]] === boardState[winningLine[2]] && boardState[winningLine[0]] != undefined){
-            console.log(`${currentPlayer} has won!`)
+            console.log(`${boardState[winningLine[0]]} has won!`)
         }
     })
 
