@@ -41,6 +41,8 @@ function isGameWon(boardState) {
     winningLines.forEach(winningLine => {
         if (boardState[winningLine[0]] === boardState[winningLine[1]] && boardState[winningLine[1]] === boardState[winningLine[2]] && boardState[winningLine[0]] != undefined){
             console.log(`${boardState[winningLine[0]]} has won!`)
+            let winnerNotify = document.querySelector('#winnerID')
+            winnerNotify.innerText = `${JSON.stringify(currentPlayer)} has won!`
         }
     })
 
