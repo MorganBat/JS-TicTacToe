@@ -17,4 +17,6 @@ td {
     text-align: center;
     border: 1px solid black;
     font-size: xx-large;
+    width: 100px;
+    height: 100px;
 }
