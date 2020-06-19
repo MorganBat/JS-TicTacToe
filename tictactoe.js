@@ -8,13 +8,13 @@ squares.forEach(square => {
         if (square.innerHTML === '') {
             square.innerHTML = currentPlayer
             board[parseInt(square.id)] = currentPlayer
+            isGameWon(board)
             if (currentPlayer === "X") {
                 currentPlayer = "O"
             }
             else if (currentPlayer === "O") {
                 currentPlayer = "X"
             }
-            isGameWon(board)
         }
 
     })
