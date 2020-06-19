@@ -44,7 +44,6 @@ function isGameWon(boardState) {
             let winnerNotify = document.querySelector('#winnerID')
             winnerNotify.innerText = `${JSON.stringify(currentPlayer)} has won!`
             gameWon = true
-            console.log(board)
         }
     })
 }
@@ -60,5 +59,4 @@ document.getElementById("gameReset").addEventListener("click", () => {
     let winnerNotify = document.querySelector('#winnerID')
     winnerNotify.innerHTML = ''
     board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
-    console.log(board)
 });
