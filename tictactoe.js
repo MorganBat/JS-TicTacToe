@@ -1,11 +1,12 @@
 let board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
 let currentPlayer = "X"
+let gameWon = false
 
 const squares = Array.from(document.querySelectorAll('td'));
 
 squares.forEach(square => {
     square.addEventListener("click", () => {
-        if (square.innerHTML === '') {
+        if (square.innerHTML === '' && gameWon === false) {
             square.innerHTML = currentPlayer
             board[parseInt(square.id)] = currentPlayer
             isGameWon(board)
@@ -43,6 +44,7 @@ function isGameWon(boardState) {
             console.log(`${boardState[winningLine[0]]} has won!`)
             let winnerNotify = document.querySelector('#winnerID')
             winnerNotify.innerText = `${JSON.stringify(currentPlayer)} has won!`
+            gameWon = true
         }
     })
 
