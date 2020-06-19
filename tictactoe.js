@@ -47,5 +47,12 @@ function isGameWon(boardState) {
             gameWon = true
         }
     })
-
 }
+
+document.getElementById("gameReset").addEventListener("click", () => {
+    let board = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+    gameWon = false
+    squares.forEach(square => {
+        square.innerHTML = ''
+    })
+});
