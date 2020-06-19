@@ -36,10 +36,6 @@ function isGameWon(boardState) {
         ]
 
     winningLines.forEach(winningLine => {
-        console.log(winningLine)
-        console.log(boardState[winningLine[0]])
-        console.log(boardState[winningLine[1]])
-        console.log(boardState[winningLine[2]])
         if (boardState[winningLine[0]] === boardState[winningLine[1]] && boardState[winningLine[1]] === boardState[winningLine[2]] && boardState[winningLine[0]] != undefined){
             console.log(`${currentPlayer} has won!`)
         }
