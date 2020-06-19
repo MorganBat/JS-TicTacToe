@@ -17,7 +17,6 @@ squares.forEach(square => {
                 currentPlayer = "X"
             }
             let title = document.querySelector("#currentPlayer")
-            console.log(currentPlayer)
             title.innerText = JSON.stringify(currentPlayer)
         }
 
@@ -55,4 +54,7 @@ document.getElementById("gameReset").addEventListener("click", () => {
     squares.forEach(square => {
         square.innerHTML = ''
     })
+    currentPlayer = "X"
+    let title = document.querySelector("#currentPlayer")
+    title.innerText = "\"X\""
 });
