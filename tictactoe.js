@@ -14,7 +14,7 @@ squares.forEach(square => {
             else if (currentPlayer === "O") {
                 currentPlayer = "X"
             }
-            console.log(square.id)
+            isGameWon(board)
         }
 
     })
@@ -33,9 +33,16 @@ function isGameWon(boardState) {
         // Diagonals
         [0, 4, 8],
         [2, 4, 6]
-        ];
+        ]
 
-    if (boardState[winningLines[0]] === boardState[winningLines[1]] && boardState[winningLines[1]] === boardState[winningLines[2]]){
-        console.log(`${currentPlayer} has won!`)
-    }
+    winningLines.forEach(winningLine => {
+        console.log(winningLine)
+        console.log(boardState[winningLine[0]])
+        console.log(boardState[winningLine[1]])
+        console.log(boardState[winningLine[2]])
+        if (boardState[winningLine[0]] === boardState[winningLine[1]] && boardState[winningLine[1]] === boardState[winningLine[2]] && boardState[winningLine[0]] != undefined){
+            console.log(`${currentPlayer} has won!`)
+        }
+    })
+
 }
