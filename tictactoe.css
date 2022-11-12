@@ -1,15 +1,22 @@
 body {
     background-color: wheat;
     color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
 }
 
 table {
     border: 1px solid black;
-    width: 300px;
+    width: 450px;
+    margin: auto;
 }
 
 tr {
-    height: 100px;
+    height: 150px;
     border: 1px solid black;
 }
 
@@ -17,8 +24,8 @@ td {
     text-align: center;
     border: 1px solid black;
     font-size: xx-large;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 #winnerID {
